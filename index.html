@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les créas d'Hélène</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+  <a class="logo" alt="Les créas d'Hélène" href="#accueil">
+    <span>LOGO</span>
+  </a>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#tarifs">Prestations & Tarifs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="burger" id="burgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#accueil" class="mobile-link">Accueil</a>
+  <a href="#galerie" class="mobile-link">Galerie</a>
+  <a href="#tarifs" class="mobile-link">Prestations & Tarifs</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="accueil">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>Couture Artisanale</h1>
+    <p>Broderie faite main, couture sur mesure et art textile. Un savoir-faire de qualité.</p>
+    <a href="#contact" class="btn-primary">Contactez-moi</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2 class="sectionTitle">Services</h2>
+  <p class="sectionSub">De la broderie délicate aux créations sur mesure, chaque point est réalisé avec précision, soin et passion du métier.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">✨</div>
+      <h3>Broderie Personnalisée</h3>
+      <p>Broderie main raffinée pour vêtements, linge de maison et souvenirs. Créations personnalisées qui racontent votre histoire.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">✂️</div>
+      <h3>Retouches & Ajustements</h3>
+      <p>Services de retouche et ajustements professionnels pour un ajustement parfait. Des ourlets aux reconstructions complètes de vêtements.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤍</div>
+      <h3>Créations Sur Mesure</h3>
+      <p>Vêtements uniques, textiles de maison et pièces décoratives réalisés selon vos spécifications.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Passion & Précision</h2>
+      <p>Depuis plus de deux décennies, je crée de magnifiques ouvrages de couture, transformant tissu et fil en art vestimentaire et souvenirs précieux. Chaque projet est traité avec le soin et l'attention qu'il mérite.</p>
+      <p>Qu'il s'agisse d'un délicat monogramme brodé main, d'un vêtement vintage remis à neuf, ou d'une création entièrement sur mesure, chaque point est réalisé avec amour et expertise.</p>
+      <div class="stats">
+        <div>
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Années d'Expérience</div>
+        </div>
+        <div>
+          <div class="stat-num">800+</div>
+          <div class="stat-label">Clients Satisfaits</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80" alt="Fils colorés" />
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie">
+  <h2 class="sectionTitle">Réalisations Récentes</h2>
+  <p class="sectionSub">Un aperçu de mes dernières créations brodées à la main avec soin et passion.</p>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img>
+    </div>
+    <div class="gallery-item">
+      <img>
+    </div>
+    <div class="gallery-item">
+      <img>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs">
+  <h2 class="sectionTitle">Prestations & Tarifs</h2>
+  <p class="sectionSub">Tarifs transparents pour un travail de qualité. Chaque projet est unique, contactez-moi pour un devis personnalisé.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Services de Broderie</h3>
+      <div class="pricing-row">
+        <span>Monogramme simple</span>
+        <span class="price">À partir de 15€</span>
+      </div>
+      <div class="pricing-row">
+        <span>Motif personnalisé (petit)</span>
+        <span class="price">À partir de 35€</span>
+      </div>
+      <div class="pricing-row">
+        <span>Motif personnalisé (grand)</span>
+        <span class="price">À partir de 80€</span>
+      </div>
+    </div>
+    <div class="pricing-card">
+      <h3>Retouches & Ajustements</h3>
+      <div class="pricing-row">
+        <span>Ajustement d'ourlet</span>
+        <span class="price">À partir de 12€</span>
+      </div>
+      <div class="pricing-row">
+        <span>Retaille de vêtement</span>
+        <span class="price">À partir de 25€</span>
+      </div>
+      <div class="pricing-row">
+        <span>Création sur mesure</span>
+        <span class="price">Devis sur demande</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="sectionTitle">Me Contacter</h2>
+  <p class="sectionSub">Vous avez un projet en tête ? J'aimerais beaucoup en discuter avec vous. Contactez-moi pour un devis, des questions, ou pour parler de votre création sur mesure.</p>
+  <div class="contact-items">
+    <div class="contact-item">
+      <div class="contact-icon"></div>
+      <p>06 12 34 56 78</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"></div>
+      <p>contact@creasdhelene.fr</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"></div>
+      <p>Paris, France</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Les créa's d'Hélène. Cousu avec amour.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
