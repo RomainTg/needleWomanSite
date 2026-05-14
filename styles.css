@@ -1,12 +1,9 @@
-/* ============================================
-   BASE STYLES - MOBILE FIRST (0 à 480px)
-   ============================================ */
+/* =========================================
+   BREAKPOINTS RESPONSIVE - BASE VIDE
+========================================= */
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Mobile par défaut : 0px à 480px */
+/* Pas de media query nécessaire */
 
 :root {
   --pink:       #c8557c;
@@ -25,52 +22,21 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: var(--text);
-  background: var(--white);
-  overflow-x: hidden;
+  margin: 0;
 }
 
-/* ── HEADER ───────────────────────────────── */
 header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
   background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(6px);
   border-bottom: 1px solid #f0e4ea;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 10px 10px;
   height: 64px;
 }
 
-/* ── LOGO ─────────────────────────────────── */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-
-.logo-icon {
-  font-size: 22px;
-  color: var(--pink);
-}
-
-.logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  line-height: 1.3;
-  color: var(--pink);
-  font-style: italic;
-}
-
-.logo-sub {
-  font-size: 10px;
-  color: var(--pink-mid);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.logo img {
+  height: 60px;
 }
 
 /* ── NAVIGATION DESKTOP (cachée sur mobile) ─ */
@@ -162,10 +128,9 @@ nav a:hover {
 }
 
 /* ── HERO ─────────────────────────────────── */
-#accueil {
+#hero {
   position: relative;
-  height: 480px;
-  margin-top: 64px;
+  height: 360px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -174,26 +139,15 @@ nav a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=80') center / cover no-repeat;
-}
-
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(196, 80, 120, 0.72) 0%,
-    rgba(196, 80, 120, 0.4) 60%,
-    rgba(196, 80, 120, 0.15) 100%
-  );
+  background: url('../assets/images/ultra\ hd.png') center / cover no-repeat;
+  opacity: 0.8;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 28px;
-  max-width: 480px;
+  padding: 0 40px;
+  max-width: 360px;
 }
 
 .hero-content h1 {
@@ -228,18 +182,12 @@ nav a:hover {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(200, 85, 124, 0.25);
-}
-
 /* ── SECTIONS BASE ────────────────────────── */
 section {
-  padding: 60px 24px;
+  padding: 40px 24px;
 }
 
 .sectionTitle {
-  font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 700;
   text-align: center;
@@ -258,6 +206,10 @@ section {
 /* ── SERVICES ─────────────────────────────── */
 #services {
   background: var(--white);
+}
+
+#services i {
+  color: var(--pink);
 }
 
 .cards {
@@ -293,14 +245,8 @@ section {
   margin-bottom: 18px;
 }
 
-.card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  margin-bottom: 10px;
-}
-
 .card p {
-  color: var(--muted);
+  color :#7a7a7a;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -319,19 +265,18 @@ section {
 }
 
 .about-img {
-  order: -1;
+  opacity: 0.75;
 }
 
 .about-img img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 5px;
   object-fit: cover;
   height: 240px;
   box-shadow: 0 12px 36px rgba(200, 85, 124, 0.12);
 }
 
 .about-text h2 {
-  font-family: 'Playfair Display', serif;
   font-size: 24px;
   margin-bottom: 16px;
 }
@@ -370,15 +315,15 @@ section {
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 25px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .gallery-item {
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
-  aspect-ratio: 1;
+  aspect-ratio: 5/3;
   cursor: pointer;
   position: relative;
 }
@@ -387,6 +332,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.8;
   transition: transform 0.4s;
 }
 
@@ -427,7 +373,6 @@ section {
 }
 
 .pricing-card h3 {
-  font-family: 'Playfair Display', serif;
   font-size: 17px;
   margin-bottom: 20px;
 }
@@ -496,205 +441,43 @@ footer {
   border-top: 1px solid #f0e4ea;
 }
 
-/* ============================================
-   GRAND MOBILE (481px et plus)
-   ============================================ */
+/* GRAND MOBILE */
 @media (min-width: 481px) {
-  .hero-content h1 {
-    font-size: 30px;
-  }
 
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-items {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 36px;
-  }
 }
 
-/* ============================================
-   MOBILE LANDSCAPE / PHABLET (576px et plus)
-   ============================================ */
+
+/* MOBILE LANDSCAPE / PHABLET */
 @media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
 
-  .pricing-grid {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
-/* ============================================
-   TABLETTE PORTRAIT (768px et plus)
-   ============================================ */
+
+/* TABLETTE PORTRAIT */
 @media (min-width: 768px) {
-  header {
-    padding: 0 32px;
-    height: 72px;
-  }
 
-  /* Cacher le burger */
-  .burger {
-    display: none;
-  }
-
-  /* Cacher le menu mobile */
-  .mobile-nav {
-    display: none !important;
-  }
-
-  /* Afficher la nav desktop */
-  nav {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-  }
-
-  .logo-icon { font-size: 26px; }
-  .logo-text  { font-size: 14px; }
-
-  #accueil {
-    height: 520px;
-    margin-top: 72px;
-  }
-
-  .hero-content {
-    padding: 0 48px;
-    max-width: 520px;
-  }
-
-  .hero-content h1 { font-size: 34px; }
-  .hero-content p  { font-size: 15px; }
-
-  section { padding: 72px 36px; }
-  .section-title { font-size: 27px; }
-
-  .cards { grid-template-columns: 1fr; }
-
-  .about-grid { gap: 36px; }
-  .about-img img { height: 300px; }
-  .about-text h2 { font-size: 27px; }
-
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-
-  .pricing-grid { grid-template-columns: 1fr 1fr; }
 }
 
-/* ============================================
-   TABLETTE LANDSCAPE (992px et plus)
-   ============================================ */
+
+/* TABLETTE LANDSCAPE */
 @media (min-width: 992px) {
-  header {
-    padding: 0 48px;
-    height: 80px;
-  }
 
-  nav { gap: 36px; }
-  nav a { font-size: 14px; }
-
-  .logo-icon { font-size: 28px; }
-  .logo-text  { font-size: 15px; }
-
-  #accueil {
-    height: 560px;
-    margin-top: 80px;
-  }
-
-  .hero-content {
-    padding: 0 72px;
-    max-width: 560px;
-  }
-
-  .hero-content h1 { font-size: 38px; }
-  .hero-content p  { font-size: 16px; }
-
-  section { padding: 80px 48px; }
-  .section-title { font-size: 29px; }
-  .section-sub { font-size: 15px; margin-bottom: 52px; }
-
-  /* Services : 3 colonnes */
-  .cards { grid-template-columns: repeat(3, 1fr); gap: 24px; }
-
-  /* About : 2 colonnes côte à côte */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: center;
-  }
-
-  .about-img { order: 0; }
-  .about-img img { height: 360px; }
-  .about-text h2 { font-size: 29px; }
-  .about-text p  { font-size: 15px; }
-
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
-  .contact-items { gap: 60px; }
 }
 
-/* ============================================
-   DESKTOP (1024px et plus)
-   ============================================ */
+
+/* DESKTOP */
 @media (min-width: 1024px) {
-  nav a { font-size: 14px; }
 
-  .hero-content h1 { font-size: 42px; }
-
-  section { padding: 88px 48px; }
-  .section-title { font-size: 30px; }
-
-  .about-grid { gap: 72px; }
-  .about-img img { height: 380px; }
-  .about-text h2 { font-size: 30px; }
-
-  .pricing-card { padding: 36px 32px; }
-  .pricing-card h3 { font-size: 19px; }
-  .pricing-row { font-size: 14px; }
-
-  .contact-items { gap: 72px; }
 }
 
-/* ============================================
-   LARGE DESKTOP (1280px et plus)
-   ============================================ */
+
+/* LARGE DESKTOP */
 @media (min-width: 1280px) {
-  header { padding: 0 64px; }
 
-  .hero-content { padding: 0 96px; }
-  .hero-content h1 { font-size: 44px; }
-
-  .cards { gap: 28px; }
-  .gallery-grid { gap: 22px; }
 }
 
-/* ============================================
-   EXTRA LARGE DESKTOP (1920px et plus)
-   ============================================ */
+
+/* EXTRA LARGE DESKTOP */
 @media (min-width: 1920px) {
-  header { padding: 0 120px; height: 88px; }
 
-  nav a { font-size: 16px; }
-
-  .logo-text { font-size: 17px; }
-  .logo-icon { font-size: 32px; }
-
-  .hero-content h1 { font-size: 52px; }
-  .hero-content p  { font-size: 18px; }
-
-  section { padding: 100px 80px; }
-
-  .section-title { font-size: 36px; }
-  .section-sub   { font-size: 17px; }
-
-  .cards { max-width: 1400px; gap: 36px; }
-  .about-grid { max-width: 1400px; gap: 96px; }
-  .gallery-grid { max-width: 1400px; }
-  .pricing-grid { max-width: 1100px; }
-  .contact-items { gap: 100px; }
 }
