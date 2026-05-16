@@ -54,7 +54,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--pink);
+  color: var(--pink-mid);
 }
 
 /* ── BURGER ──*/
