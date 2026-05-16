@@ -442,6 +442,16 @@ section {
   color: var(--muted);
 }
 
+.contact-item a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover {
+  color: var(--pink);
+}
+
 /* ── FOOTER ───────────────────────────────── */
 footer {
   background: var(--bg-section);
@@ -461,6 +471,15 @@ footer {
 /* MOBILE LANDSCAPE / PETITE TABLETTE */
 @media (min-width: 576px) {
 
+/* CONTACT */
+.contact-items {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  justify-content: space-evenly;
+}
+
 }
 
 
@@ -470,6 +489,11 @@ footer {
 /* HEADER */
 header {
   padding: 12px 25px;
+  height: 72px;
+}
+
+.logo img {
+  height: 68px;
 }
 
 .burger {
@@ -554,7 +578,7 @@ section {
   justify-content: center;
   align-items: flex-start;
   gap: 48px;
-  
+  justify-content: space-evenly;
 }
 
 .contact-item p{
@@ -566,8 +590,14 @@ section {
 /* TABLETTE LANDSCAPE */
 @media (min-width: 992px) {
 
+/* HEADER */
 header {
-  padding: 10px 30px;
+  padding: 10px 25px;
+  height: 76px;
+}
+
+.logo img {
+  height: 72px;
 }
 
 /* HERO */
@@ -628,15 +658,25 @@ section {
   max-width: 1100px;
 }
 
-/* CONTACT */
 .contact-items {
-  gap: 100px;
+  justify-content: space-evenly;
 }
 
 }
 
 /* DESKTOP */
 @media (min-width: 1024px) {
+
+/* HEADER*/ 
+header {
+  height: 80px; 
+}
+.logo img { 
+  height: 76px; 
+}
+nav a { 
+  font-size: 16px; 
+}
 
 /* SECTIONS */
 section {
@@ -660,8 +700,8 @@ section {
 .stat-num      { font-size: 32px; }
 
 /* TARIFS */
-.pricing-card h3   { font-size: 18px; }
-.pricing-row       { font-size: 14px; }
+.pricing-card h3   { font-size: 20px; }
+.pricing-row       { font-size: 15px; }
 
 /* CONTACT */
 .contact-item p { font-size: 15px; }
@@ -674,6 +714,11 @@ section {
 /* HEADER */
 header {
   padding: 10px 30px;
+  height: 84px;
+}
+
+.logo img { 
+  height: 80px; 
 }
 
 /* SECTIONS */
@@ -705,7 +750,16 @@ section {
 
 /* HEADER */
 header {
-  padding: 0 120px;
+  padding: 10px 25px;
+  height: 96px;
+}
+
+.logo img { 
+  height: 92px; 
+}
+
+nav a { 
+  font-size: 18px; 
 }
 
 /* SECTIONS */
