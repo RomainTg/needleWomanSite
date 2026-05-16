@@ -1,9 +1,4 @@
-/* =========================================
-   BREAKPOINTS RESPONSIVE - BASE VIDE
-========================================= */
-
-/* Mobile par défaut : 0px à 480px */
-/* Pas de media query nécessaire */
+/* MOBILE PAR DEFAUT : 0px à 480px */
 
 :root {
   --pink:       #c8557c;
@@ -62,7 +57,7 @@ nav a:hover {
   color: var(--pink);
 }
 
-/* ── BURGER ───────────────────────────────── */
+/* ── BURGER ──*/
 .burger {
   display: flex;
   flex-direction: column;
@@ -94,7 +89,7 @@ nav a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ── MOBILE NAV ───────────────────────────── */
+/* ── MOBILE NAV ── */
 .mobile-nav {
   position: fixed;
   top: 81px;
@@ -132,7 +127,7 @@ nav a:hover {
   background: var(--pink-pale);
 }
 
-/* ── HERO ─────────────────────────────────── */
+/* ── HERO ── */
 #hero {
   position: relative;
   height: 360px;
@@ -187,7 +182,7 @@ nav a:hover {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* ── SECTIONS BASE ────────────────────────── */
+/* ── SECTIONS BASE ──*/
 section {
   padding: 40px 24px;
 }
@@ -208,7 +203,7 @@ section {
   margin: 0 auto 40px;
 }
 
-/* ── SERVICES ─────────────────────────────── */
+/* ── SERVICES ── */
 #services {
   background: var(--white);
 }
@@ -256,7 +251,7 @@ section {
   line-height: 1.7;
 }
 
-/* ── ABOUT ────────────────────────────────── */
+/* ── ABOUT ─── */
 #about {
   background: var(--bg-section);
 }
@@ -312,7 +307,7 @@ section {
   margin-top: 4px;
 }
 
-/* ── GALERIE ──────────────────────────────── */
+/* ── GALERIE ── */
 #galerie {
   background: var(--white);
 }
@@ -357,7 +352,7 @@ section {
   background: rgba(200, 85, 124, 0.15);
 }
 
-/* ── TARIFS ───────────────────────────────── */
+/* ── TARIFS ── */
 #tarifs {
   background: var(--bg-section);
 }
@@ -405,7 +400,7 @@ section {
   color: var(--pink);
 }
 
-/* ── CONTACT ──────────────────────────────── */
+/* ── CONTACT ── */
 #contact {
   background: var(--white);
 }
@@ -452,7 +447,7 @@ section {
   color: var(--pink);
 }
 
-/* ── FOOTER ───────────────────────────────── */
+/* ── FOOTER ── */
 footer {
   background: var(--bg-section);
   text-align: center;
