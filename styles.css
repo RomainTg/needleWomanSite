@@ -169,7 +169,7 @@ nav a:hover {
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 26px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -179,7 +179,7 @@ nav a:hover {
   color: var(--pink);
   border: none;
   border-radius: 30px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -228,7 +228,7 @@ section {
 .card {
   background: var(--white);
   border: 1px solid #f0e6ec;
-  border-radius: 16px;
+  border-radius: 15px;
   padding: 28px 22px;
   transition: box-shadow 0.3s, transform 0.3s;
 }
@@ -270,12 +270,12 @@ section {
 }
 
 .about-img {
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 .about-img img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 15px;
   object-fit: cover;
   height: 240px;
   box-shadow: 0 12px 36px rgba(200, 85, 124, 0.12);
@@ -326,7 +326,7 @@ section {
 }
 
 .gallery-item {
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 5/3;
   cursor: pointer;
@@ -372,7 +372,7 @@ section {
 
 .pricing-card {
   background: var(--white);
-  border-radius: 16px;
+  border-radius: 15px;
   padding: 28px 24px;
   box-shadow: 0 4px 20px rgba(200, 85, 124, 0.07);
 }
@@ -399,6 +399,10 @@ section {
   font-weight: 700;
   color: var(--text);
   white-space: nowrap;
+}
+
+ #tarifs .price {
+  color: var(--pink);
 }
 
 /* ── CONTACT ──────────────────────────────── */
@@ -465,7 +469,7 @@ footer {
 
 /* HEADER */
 header {
-  padding: 0 32px;
+  padding: 12px 25px;
 }
 
 .burger {
@@ -478,8 +482,15 @@ header {
 
 nav {
   display: flex;
-  gap: 24px;
+  gap: 30px;
   align-items: center;
+}
+
+nav a {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--pink);
 }
 
 /* HERO */
@@ -554,6 +565,10 @@ section {
 
 /* TABLETTE LANDSCAPE */
 @media (min-width: 992px) {
+
+header {
+  padding: 10px 30px;
+}
 
 /* HERO */
 .hero-content h1 { font-size: 38px; }
@@ -658,7 +673,7 @@ section {
 
 /* HEADER */
 header {
-  padding: 0 80px;
+  padding: 10px 30px;
 }
 
 /* SECTIONS */
@@ -677,6 +692,10 @@ section {
 /* TARIFS */
 .pricing-grid {
   max-width: 1200px;
+}
+
+.contact-items {
+  justify-content: space-evenly;
 }
 
 }
