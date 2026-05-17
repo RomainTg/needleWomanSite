@@ -157,6 +157,7 @@ nav a:hover {
   color: var(--white);
   margin-bottom: 14px;
   line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content p {
@@ -165,6 +166,7 @@ nav a:hover {
   line-height: 1.7;
   margin-bottom: 26px;
   font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary {
