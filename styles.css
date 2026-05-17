@@ -139,7 +139,7 @@ nav a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/ultra\ hd.png') center / cover no-repeat;
+  background: url('assets/images/rideau-hero-section.png') center / cover no-repeat;
   opacity: 0.8;
 }
 
