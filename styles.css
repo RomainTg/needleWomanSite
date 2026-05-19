@@ -139,7 +139,7 @@ nav a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('assets/images/rideau-hero-section.png') center / cover no-repeat;
+  background: url('assets/images/rideau-hero-section-mobile.jpg') center bottom / cover no-repeat;
   opacity: 0.8;
 }
 
@@ -309,49 +309,100 @@ section {
   margin-top: 4px;
 }
 
-/* ── GALERIE ── */
+/* ── GALERIE CAROUSEL ── */
 #galerie {
   background: var(--white);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
-  max-width: 1100px;
+.carousel {
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.gallery-item {
+/* Grande image */
+.carousel-main {
+  width: 100%;
+  aspect-ratio: 5/3;
   border-radius: 10px;
   overflow: hidden;
-  aspect-ratio: 5/3;
-  cursor: pointer;
-  position: relative;
+  margin-bottom: 16px;
 }
 
-.gallery-item img {
+.carousel-main img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.5s ease;
   opacity: 0.8;
-  transition: transform 0.4s;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.06);
+.carousel-main img.fade {
+  opacity: 0;
 }
 
-.gallery-item::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(200, 85, 124, 0);
-  transition: background 0.3s;
+/* Wrapper flèches + miniatures */
+.carousel-thumbs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.gallery-item:hover::after {
-  background: rgba(200, 85, 124, 0.15);
+/* Flèches */
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #f0e6ec;
+  background: var(--white);
+  color: var(--pink);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: var(--pink);
+  color: var(--white);
+}
+
+/* Miniatures */
+.carousel-thumbs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  flex: 1;
+}
+
+.carousel-thumbs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.thumb:hover {
+  opacity: 0.85;
+}
+
+.thumb.active {
+  opacity: 1;
+  border-color: var(--pink);
 }
 
 /* ── TARIFS ── */
@@ -467,6 +518,15 @@ footer {
 
 /* MOBILE LANDSCAPE / PETITE TABLETTE */
 @media (min-width: 576px) {
+
+/* HEADER */
+#hero {
+  height: 380px;
+}
+
+.hero-bg {
+  background: url('assets/images/rideau-hero-section.png') center bottom / cover no-repeat;
+}
 
 /* CONTACT */
 .contact-items {
@@ -657,6 +717,7 @@ section {
 
 .contact-items {
   justify-content: space-evenly;
+  padding: 0 80px 0 80px;
 }
 
 }
@@ -666,13 +727,13 @@ section {
 
 /* HEADER*/ 
 header {
-  height: 80px; 
+  height: 96px; 
 }
 .logo img { 
-  height: 76px; 
+  height: 88px; 
 }
 nav a { 
-  font-size: 16px; 
+  font-size: 17px; 
 }
 
 /* SECTIONS */
@@ -701,6 +762,9 @@ section {
 .pricing-row       { font-size: 15px; }
 
 /* CONTACT */
+.contact-items {
+  padding: 0 120px 0 120px;
+}
 .contact-item p { font-size: 15px; }
 
 }
@@ -711,11 +775,11 @@ section {
 /* HEADER */
 header {
   padding: 10px 30px;
-  height: 84px;
+  height: 94px;
 }
 
 .logo img { 
-  height: 80px; 
+  height: 90px; 
 }
 
 /* SECTIONS */
@@ -738,6 +802,7 @@ section {
 
 .contact-items {
   justify-content: space-evenly;
+  padding: 20px 240px 0 240px;
 }
 
 }
