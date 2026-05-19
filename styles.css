@@ -485,15 +485,19 @@ section {
   margin: 0 auto 12px;
 }
 
-.contact-item p {
-  font-size: 14px;
-  color: var(--muted);
-}
-
 .contact-item a {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.contact-item i {
+  color: var(--pink);
+}
+
+.contact-item p {
+  font-size: 14px;
+  color: var(--muted);
 }
 
 .contact-item a:hover {
@@ -745,8 +749,8 @@ section {
 .sectionSub   { font-size: 15px; }
 
 /* HERO */
-.hero-content h1 { font-size: 42px; }
-.hero-content p  { font-size: 15px; }
+.hero-content h1 { font-size: 48px; }
+.hero-content p  { font-size: 18px; }
 
 /* SERVICES */
 .card h3 { font-size: 18px; }
@@ -833,8 +837,8 @@ section {
 .sectionSub   { font-size: 16px; }
 
 /* HERO */
-.hero-content h1 { font-size: 52px; }
-.hero-content p  { font-size: 16px; }
+.hero-content h1 { font-size: 62px; }
+.hero-content p  { font-size: 20px; }
 .hero-content {
   max-width: 700px;
 }
