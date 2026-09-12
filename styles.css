@@ -453,6 +453,18 @@ section {
   color: var(--pink);
 }
 
+.detailBebe {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.produitInfo {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
 /* ── CONTACT ── */
 #contact {
   background: var(--white);
