@@ -372,6 +372,7 @@ section {
 
 /* Miniatures */
 .carousel-thumbs {
+  position: relative;
   display: flex;
   gap: 10px;
   overflow-x: auto;
